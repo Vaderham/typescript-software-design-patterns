@@ -1,4 +1,4 @@
-import { Food } from '../Factory/Product/Food';
+import { Food } from '../FactoryMethod/Product/Food';
 
 export abstract class FoodService {
   public abstract createFood(hungerLevel: number): Food;
