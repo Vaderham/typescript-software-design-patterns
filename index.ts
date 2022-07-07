@@ -14,12 +14,18 @@ function orderFood(service: FoodService): string {
 }
 */
 
-const cp = new ChickenFoodFactory();
+const chickenFactory = new ChickenFoodFactory();
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
-// const cp: HTMLElement = document.getElementById('ChickenPizza');
+document
+  .getElementById('ChickenPizza')
+  .addEventListener('click', () => doStuff());
 // const cs: HTMLElement = document.getElementById('ChickenSandwich');
 // const tp: HTMLElement = document.getElementById('TofuPizza');
 // const ts: HTMLElement = document.getElementById('TofuSandwich');
-appDiv.innerHTML = `${cp.orderPizza().describe()}`;
+appDiv.innerHTML = `${chickenFactory.orderPizza().describe()}`;
+
+function doStuff(): void {
+  console.log('Do stuff');
+}
